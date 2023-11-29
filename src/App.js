@@ -3,8 +3,8 @@ import './App.css';
 import Snowfall from './components/SnowFall';
 function Case({num}) {
   return (
-    <div className='w-[90%] h-[90%] min-h-[100px] border border-1 border-white flex text-white bg-main rounded m-1 bg-main z-5'>
-      <h1 className='font-bold ml-3 mt-3 text-xl font-fredoka'>{num}</h1>
+    <div className='w-[90%] h-[90%] min-h-[100px] border border-1 border-white flex text-white bg-main rounded m-1 bg-main z-5 cursor-pointer hover:brightness-110'>
+      <h1 className='font-bold ml-3 mt-3 text-3xl font-fredoka'>{num}</h1>
     </div>
   )
 }
