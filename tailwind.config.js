@@ -8,7 +8,11 @@ module.exports = {
       'main': '#CB5354',
       'white': "white",
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        'fredoka': ['"Fredoka"', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
