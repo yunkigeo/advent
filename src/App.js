@@ -11,12 +11,12 @@ function Case({num, open}) {
 }
 
 
-function Popup({num}) {
+// function Popup({num}) {
 
-}
+// }
 function App() {
   const caseNumbers = Array.from({ length: 24 }, (_, index) => index + 1);
-  const [currentNum, setCurrentNum] = useState(1);
+  // const [currentNum, setCurrentNum] = useState(1);
   const [open, setOpen] = useState(false)
   return (
     <div className='relative'>
