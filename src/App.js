@@ -25,7 +25,7 @@ function App() {
           <div>
            <h1 className='text-2xl font-bold mt-2'>Jour {currentNum}</h1>
            <div className='flex items-center justify-center mt-4 flex-col'>
-            <img src={`../images/gifts/${currentNum}.svg`} alt="gifts" className='w-[200px]'/>
+            <img src={`../images/gifts/${currentNum}.svg`} alt="gifts" className='w-[150px]'/>
             <p className='mt-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  </p>
             </div>
 
