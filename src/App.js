@@ -36,19 +36,20 @@ function App() {
       
     }
     <div className="bg-base grid md:grid-cols-1 lg:grid-cols-3 min-h-[100vh] p-[30px]">
-      <div className='lg:my-2 lg:p-4'>
-        <h1 className='text-4xl font-bold font-fredoka mb-2'>Calendrier de l'avent</h1>
+      <div className='lg:my-2 lg:p-4 max-md:px-2'>
+        <h1 className='text-4xl font-bold font-fredoka mb-2'>Calendrier de l'avent 2024</h1>
         <p className='max-w-[400px] py-3'>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
       </div>
-      <div className='lg:col-span-2 grid sm:grid-cols-3 md:grid-cols-5'>
+      <div className='lg:col-span-2 grid max-md:grid-cols-3 md:grid-cols-5'>
       {caseNumbers.map((num) => (
         <Case key={num} num={num} open={()=> {setOpen(true)}} />
       ))}
       </div>
     
     </div>
+    <div className='bg-base p-11 text-right text-xs'>Calendrier de l'avent | Made by Yunki | 2024</div>
     </div>
   );
 }
