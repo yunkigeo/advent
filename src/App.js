@@ -20,14 +20,20 @@ function App() {
     <Snowfall/>
     {open && 
       <div className='fixed top-0 left-0 right-0 bottom-0 bg-white bg-opacity-50 flex items-center justify-center z-50' onClick={()=> setOpen(false)}>
-        <div className='w-[500px] font-fredoka h-[400px] max-sm:h-[90vh] max-sm:w-[90vw] bg-white p-5 relative rounded shadow-lg'>
+        <div className='w-[400px] font-fredoka h-min-[400px]  bg-white p-5 relative rounded shadow-lg'>
           <button onClick={()=>{setOpen(false)}} className='bg-main text-white p-3 absolute right-3 rounded hover:brightness-110'>Close</button>
-          <div className=''>
-           <h1 className='text-2xl font-bold mt-2'>Gift #{currentNum}</h1>
+          <div>
+           <h1 className='text-2xl font-bold mt-2'>Jour {currentNum}</h1>
+           <div className='flex items-center justify-center mt-4 flex-col'>
+            <img src={`../images/gifts/${currentNum}.svg`} alt="gifts" className='w-[300px]'/>
+            <p className='mt-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  </p>
+            </div>
+
+            
+           
           </div>
 
         </div>
-
       </div>
       
     }
@@ -37,6 +43,8 @@ function App() {
         <p className='max-w-[400px] py-3'>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
+        {/* <img src='../images/tree.svg' className='max-lg:hidden mt-9 max-w-[400px]' alt="deco" /> */}
+        
       </div>
       <div className='lg:col-span-2 grid max-md:grid-cols-3 md:grid-cols-5'>
       {caseNumbers.map((num) => (
@@ -45,7 +53,7 @@ function App() {
       </div>
     
     </div>
-    {/* <div className='bg-base p-11 text-right text-xs'>Calendrier de l'avent | Made by Yunki | 2024</div> */}
+    <div className='bg-base p-11 text-right text-xs'>Calendrier de l'avent | Made by Yunki | 2024 | Image credit : svgrepo</div>
     </div>
   );
 }
