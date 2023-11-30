@@ -3,17 +3,14 @@ import './App.css';
 import Snowfall from './components/SnowFall';
 
 function Case({num, open}) {
+  const listGreen = [3,7,14,16, 24]
   return (
-    <div className='w-[90%] h-[90%] min-h-[150px] border border-1 border-white flex text-white bg-main rounded m-1 bg-main cursor-pointer hover:brightness-110' onClick={open}>
+    <div className={`${num === 24? 'max-sm-[90%] md:w-[190%]' : 'sm:w-[90%]'} ${listGreen.includes(num)? 'bg-green':'bg-main'} h-[90%] min-h-[150px] border border-1 border-white flex text-white rounded m-1 cursor-pointer hover:brightness-110`} onClick={open}>
       <h1 className='font-bold ml-3 mt-3 text-3xl font-fredoka'>{num}</h1>
     </div>
   )
 }
 
-
-// function Popup({num}) {
-
-// }
 function App() {
   const caseNumbers = Array.from({ length: 24 }, (_, index) => index + 1);
   const [currentNum, setCurrentNum] = useState(1);
@@ -22,12 +19,11 @@ function App() {
     <div className='relative'>
     <Snowfall/>
     {open && 
-      <div className='fixed top-0 left-0 right-0 bottom-0 bg-white bg-opacity-50 flex items-center justify-center z-50'>
-
+      <div className='fixed top-0 left-0 right-0 bottom-0 bg-white bg-opacity-50 flex items-center justify-center z-50' onClick={()=> setOpen(false)}>
         <div className='w-[500px] font-fredoka h-[400px] max-sm:h-[90vh] max-sm:w-[90vw] bg-white p-5 relative rounded shadow-lg'>
           <button onClick={()=>{setOpen(false)}} className='bg-main text-white p-3 absolute right-3 rounded hover:brightness-110'>Close</button>
           <div className=''>
-           <h1 className='text-2xl font-bold mt-2'>Gift {currentNum}</h1>
+           <h1 className='text-2xl font-bold mt-2'>Gift #{currentNum}</h1>
           </div>
 
         </div>
