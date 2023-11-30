@@ -16,18 +16,18 @@ function Case({num, open}) {
 // }
 function App() {
   const caseNumbers = Array.from({ length: 24 }, (_, index) => index + 1);
-  // const [currentNum, setCurrentNum] = useState(1);
+  const [currentNum, setCurrentNum] = useState(1);
   const [open, setOpen] = useState(false)
   return (
     <div className='relative'>
     <Snowfall/>
     {open && 
-      <div className='absolute top-0 left-0 right-0 bottom-0 bg-white bg-opacity-50 flex items-center justify-center z-50'>
+      <div className='fixed top-0 left-0 right-0 bottom-0 bg-white bg-opacity-50 flex items-center justify-center z-50'>
 
-        <div className='w-[500px] h-[400px] bg-white p-5 relative'>
-          <button onClick={()=>{setOpen(false)}} className='bg-main text-white p-3 absolute right-3'>Close</button>
-          <div>
-          Content here
+        <div className='w-[500px] font-fredoka h-[400px] max-sm:h-[90vh] max-sm:w-[90vw] bg-white p-5 relative rounded shadow-lg'>
+          <button onClick={()=>{setOpen(false)}} className='bg-main text-white p-3 absolute right-3 rounded hover:brightness-110'>Close</button>
+          <div className=''>
+           <h1 className='text-2xl font-bold mt-2'>Gift {currentNum}</h1>
           </div>
 
         </div>
@@ -44,7 +44,7 @@ function App() {
       </div>
       <div className='lg:col-span-2 grid max-md:grid-cols-3 md:grid-cols-5'>
       {caseNumbers.map((num) => (
-        <Case key={num} num={num} open={()=> {setOpen(true)}} />
+        <Case key={num} num={num} open={()=> {setOpen(true);setCurrentNum(num)}} />
       ))}
       </div>
     
