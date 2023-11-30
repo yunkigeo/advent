@@ -45,7 +45,7 @@ function App() {
       </div>
     
     </div>
-    <div className='bg-base p-11 text-right text-xs'>Calendrier de l'avent | Made by Yunki | 2024</div>
+    {/* <div className='bg-base p-11 text-right text-xs'>Calendrier de l'avent | Made by Yunki | 2024</div> */}
     </div>
   );
 }
